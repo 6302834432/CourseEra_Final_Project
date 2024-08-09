@@ -3,11 +3,6 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/connection.js";
 import cors from "cors"
 
-// models
-import user from "./models/user.js";
-import book from "./models/book.js";
-import review from "./models/review.js";
-
 // routes
 import bookRoutes from "./routes/book.js";
 import authRoutes from "./routes/auth.js";
@@ -23,7 +18,7 @@ app.use(cors());
 app.use(Express.json());
 
 // routes
-const baseURL = "/api/v1";
+const baseURL = "/api/";
 app.use(baseURL, authRoutes);
 app.use(baseURL, bookRoutes);
 app.use(baseURL, reviewRoutes);
