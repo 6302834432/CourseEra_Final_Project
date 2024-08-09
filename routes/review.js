@@ -4,11 +4,11 @@ import * as reviewControllers from "../controllers/review.js";
 
 const router = Router();
 
-// registered users
+// Registered users
 router.put("/books/:id/reviews", authenticate, reviewControllers.addReview);
 router.delete("/books/:id/reviews", authenticate, reviewControllers.deleteReview);
 
-// general users
+// General users
 router.get("/books/:id/reviews", reviewControllers.getReview);
 
 
