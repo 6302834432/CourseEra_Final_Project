@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-// Define the schema for a book
 const bookSchema = new mongoose.Schema({
   ISBN: {
     type: String,
@@ -14,9 +13,11 @@ const bookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  review:{
+    type:Array,
+    default:[]
+  }
 });
-
-// Create a model using the schema
 const Book = mongoose.model('Book', bookSchema);
 
 export default Book;

@@ -6,7 +6,7 @@ import Book from './book.js';
 
 const reviewSchema = new mongoose.Schema({
   review_text: {
-    type: String,
+    type: Array,
     required: true,
   },
   user: {
@@ -14,7 +14,7 @@ const reviewSchema = new mongoose.Schema({
     ref: User,
     required: true,
   },
-  book: {
+  bookId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: Book,
     required: true,
